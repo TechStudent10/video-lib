@@ -32,36 +32,36 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 )
 
 # install glad
-install(TARGETS glad
-    EXPORT "glad-targets"
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
-    INCLUDES DESTINATION vendor/glad/include
-)
+# install(TARGETS glad
+#     EXPORT "glad-targets"
+#     ARCHIVE DESTINATION lib
+#     LIBRARY DESTINATION lib
+#     RUNTIME DESTINATION bin
+#     INCLUDES DESTINATION vendor/glad/include
+# )
 
-install(EXPORT "glad-targets"
-    FILE "glad-targets.cmake"
-    NAMESPACE glad::
-    DESTINATION lib/cmake/glad
-)
+# install(EXPORT "glad-targets"
+#     FILE "glad-targets.cmake"
+#     NAMESPACE glad::
+#     DESTINATION lib/cmake/glad
+# )
 
 # my install
 
-install(TARGETS ${PROJECT_NAME}
-    EXPORT "${PROJECT_NAME}-targets"
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
-    INCLUDES DESTINATION include
-)
+# install(TARGETS ${PROJECT_NAME}
+#     EXPORT "${PROJECT_NAME}-targets"
+#     ARCHIVE DESTINATION lib
+#     LIBRARY DESTINATION lib
+#     RUNTIME DESTINATION bin
+#     INCLUDES DESTINATION include
+# )
 
-install(DIRECTORY include/
-    DESTINATION include
-)
+# install(DIRECTORY include/
+#     DESTINATION include
+# )
 
-install(EXPORT "${PROJECT_NAME}-targets"
-    FILE "${PROJECT_NAME}-targets.cmake"
-    NAMESPACE videolib::
-    DESTINATION lib/cmake/${PROJECT_NAME}
-)
+# install(EXPORT "${PROJECT_NAME}-targets"
+#     FILE "${PROJECT_NAME}-targets.cmake"
+#     NAMESPACE videolib::
+#     DESTINATION lib/cmake/${PROJECT_NAME}
+# )
