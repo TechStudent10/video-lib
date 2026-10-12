@@ -7,8 +7,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include <glad/gl.h>
-
 class Frame {
 protected:
     enum class ShapeType {
@@ -22,14 +20,14 @@ public:
     int width;
     int height;
 
-    GLuint fbo;
-    GLuint textureID;
+    unsigned int fbo;
+    unsigned int textureID;
 
-    GLuint shapeShaderProgram;
-    GLuint texShaderProgram;
-    GLuint texYUVShaderProgram;
-    // GLuint rectVAO, rectVBO;
-    GLuint VAO, VBO, EBO;
+    unsigned int shapeShaderProgram;
+    unsigned int texShaderProgram;
+    unsigned int texYUVShaderProgram;
+    // unsigned int rectVAO, rectVBO;
+    unsigned int VAO, VBO, EBO;
 
     Frame(int width, int height);
 
@@ -42,8 +40,8 @@ public:
     void drawLine(Vector2D start, Vector2D end, Color color, int thickness = 1);
     void drawCircle(Transform transform, int radius, Color color, bool filled = true);
 
-    void drawTexture(GLuint texture, Vector2D size, Transform transform, GLuint VAO, GLuint VBO, GLuint EBO, float opacity = 1.f);
-    void drawTextureYUV(GLuint textureY, GLuint textureU, GLuint textureV, Vector2D size, Transform transform, GLuint VAO, GLuint VBO, GLuint EBO, float opacity = 1.f);
+    void drawTexture(unsigned int texture, Vector2D size, Transform transform, unsigned int VAO, unsigned int VBO, unsigned int EBO, float opacity = 1.f);
+    void drawTextureYUV(unsigned int textureY, unsigned int textureU, unsigned int textureV, Vector2D size, Transform transform, unsigned int VAO, unsigned int VBO, unsigned int EBO, float opacity = 1.f);
 
     // 0.5, 0.5 = center
     // 0, 0 = top left
