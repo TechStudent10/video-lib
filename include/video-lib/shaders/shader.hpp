@@ -1,8 +1,6 @@
 #pragma once
 
-#include <glad/gl.h>
-
 namespace shader {
-    GLuint compileShader(GLenum type, const char* source);
-    GLuint createProgram(const char* vertex, const char* fragment);
+    unsigned int compileShader(unsigned int type, const char* source);
+    unsigned int createProgram(const char* vertex, const char* fragment);
 }
